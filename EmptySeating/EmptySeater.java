@@ -1,22 +1,16 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
-// System.out.println();
-import java.util.*;
 class EmptySeater {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         int[] arr = {1,2,3,4,5};
-        String s = "";
+        String s = "";//Used to Make Seating Arrangements
         for(int i : arr){
-            if(i % 2 ==0 ){
+            if(i % 2 ==0 ){//Adds two Empty Seats near the Person with Even Reg No
                 s += String.valueOf(i)+"00";
             }
-            else{
+            else{//Adds One Empty Seat near the Person with Odd Reg No
                 s += String.valueOf(i)+"0";
             }
         }
-        long temp = Long.valueOf(s);
+        long temp = Long.valueOf(s);//Incase of returning a Numerical(Long) Value
         System.out.println(temp);
-        sc.close();
     }
 }
